@@ -1,0 +1,65 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: #0b0b0b; color: #ffffff; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+
+h1, h2, h3, .logo, .footer-logo { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-weight: 300; 
+    letter-spacing: 3px; 
+}
+
+/* Navbar */
+header { position: absolute; top: 0; left: 0; width: 100%; z-index: 100; padding: 30px 50px; }
+nav { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 20px; }
+.logo { font-size: 2rem; color: #d4af37; font-weight: bold; }
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: #fff; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+
+/* Hero avec Vidéo de fond */
+.hero { position: relative; height: 100vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 2; }
+.hero-content { position: relative; z-index: 10; text-align: center; color: white; }
+.hero h1 { font-size: 4.5rem; margin-bottom: 20px; }
+.sub-title { color: #d4af37; letter-spacing: 8px; font-size: 0.9rem; margin-bottom: 10px; display: block; }
+
+/* Bouton */
+.btn-luxury { 
+    display: inline-block; 
+    padding: 15px 35px; 
+    border: 1px solid #d4af37; 
+    color: #fff; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    transition: 0.3s;
+}
+.btn-luxury:hover { background: #d4af37; color: #000; }
+
+/* Collections */
+.collections { padding: 100px 50px; text-align: center; }
+.section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
+.line { width: 50px; height: 1px; background: #d4af37; margin: 0 auto 50px; }
+.luxury-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+.luxury-card { background: #111; border: 1px solid #222; overflow: hidden; transition: 0.3s; }
+.luxury-card:hover { border-color: #d4af37; transform: translateY(-5px); }
+.img-container { height: 350px; overflow: hidden; }
+.img-container img { width: 100%; height: 100%; object-fit: cover; }
+.card-info { padding: 20px; }
+.category { color: #888; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+
+/* Footer */
+footer { padding: 50px; border-top: 1px solid #222; text-align: center; }
+.footer-logo { color: #d4af37; font-size: 1.5rem; margin-bottom: 10px; }
+.copyright { color: #555; font-size: 0.7rem; }
